@@ -16,6 +16,7 @@ class StringableSynth extends Synth {
     }
 
     function hydrate($value) {
+        if ($value === '' || $value === null) return null;
         return str($value);
     }
 }
